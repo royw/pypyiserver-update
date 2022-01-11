@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "pypiserver_update"
+version = "0.1.0"
+description = "Update pypiserver's packages without using XML-RPC"
+authors = ["Roy Wright <roy@wright.org>"]
+license = "MIT"
+readme = "README.md"
+homepage = ""
+repository = "https://github.com/roy/pypiserver-update"
+documentation = ""
+keywords = [
+    "pypiserver",
+    "packages",
+    "update"
+]
+
+[tool.poetry.scripts]
+main = "pypiserver_update.pypiserver_update_main:main"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.27.1"
+Versio = "^0.4.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+run = "wsgi:main"
+
+[tools.poetry.urls]
+issues = ""
